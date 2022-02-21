@@ -1,0 +1,55 @@
+
+<style>
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+</style>
+
+        <div class="center" >
+        <h1>Money Calculator</h1>
+        </div>
+
+       <div class="center" >
+        <label for="name">No. Of Tasks</label>
+        <input type="number" id="Tasks" name="Tasks" min="1" >
+        </div>
+        
+        <div class="center" >
+        <label for="AHT">AHT</label>
+        <input type="number" id="AHT" name="AHT" min="1">
+        </div>
+        
+        <div class="center" >
+        <label for="Hour Rate">Hour Rate</label>
+        <input type="number" id="Hour Rate" name="Hour Rate" min="1" >
+        </div>
+
+        <div class="center" >
+        <input type="submit" value="Submit" onclick="calc()"/><br>
+        </div>
+
+
+        <script>
+            function calc() 
+            {
+            var NoOfTasks= document.getElementById("Tasks").value;
+            var AHT= document.getElementById("AHT").value;
+            var Rate= document.getElementById("Hour Rate").value;
+
+            // if (document.getElementById(Rate).value.length=0){
+            //     alert('this is not a number');
+            // }
+            var c = NoOfTasks*AHT/3600;
+            var c2 =c*Rate; 
+            document.writeln("Your Total is -----> " + c2 + " $ Us Dollar");
+            }
+            </script>
+            
+
+
+        
+
